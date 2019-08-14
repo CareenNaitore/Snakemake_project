@@ -12,7 +12,7 @@ The reads for the  datasets are from two developmental stages that is larvae and
 
 ## PIPELINE
 The methodology used in this study to analysis miRNA includes:
-1.Quality assements
+1.Quality assements/
 2.genome annotation 
 3.filtering out other types of small non coding RNA 
 4.miRNA analysis(miRNA identification and miRNA differential expression)
