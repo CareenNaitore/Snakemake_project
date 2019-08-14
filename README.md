@@ -12,16 +12,16 @@ The reads for the  datasets are from two developmental stages that is larvae and
 
 ## PIPELINE
 The methodology used in this study to analysis miRNA includes:
-1.Quality assements/
-2.genome annotation 
-3.filtering out other types of small non coding RNA 
-4.miRNA analysis(miRNA identification and miRNA differential expression)
-5.Target prediction
+1. Quality assements
+2. genome annotation 
+3. filtering out other types of small non coding RNA 
+4. miRNA analysis(miRNA identification and miRNA differential expression)
+5. Target prediction
 
 ## Project Task
-1.Reproduce the pipeline by setting up the workspace in the system you will be using
-2.Perform downstream analysis for miRNA analysis
-3.Convert the pipeline into Nextflow or Snakemake
+1. Reproduce the pipeline by setting up the workspace in the system you will be using
+2. Perform downstream analysis for miRNA analysis
+3. Convert the pipeline into Nextflow or Snakemake
 
 Through the project, you need to demonstrate collaborative research skills, informative visualization, and report writing.
 
