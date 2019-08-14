@@ -1,5 +1,5 @@
 # Snakemake_project
-This projects entails converting the pipeline language scripts of two projects:MiRNA TRANSCRIPTOME ANALYSIS In TSESTE  USING BIOINFORMATIC SOFTWARE and vaccine identification. 
+This projects entails converting the pipeline language scripts of two projects:MiRNA TRANSCRIPTOME ANALYSIS In TSESTE  USING BIOINFORMATIC SOFTWARE and VACCINE IDENTIFICATION. 
 
 ## MiRNA TRANSCRIPTOME ANALYSIS In TSESTE  USING BIOINFORMATIC SOFTWARE
 
