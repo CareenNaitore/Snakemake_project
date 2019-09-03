@@ -21,7 +21,7 @@ The methodology used in this study to analysis miRNA includes:
 ## Project Task
 1. Reproduce the pipeline by setting up the workspace in the system you will be using
 2. Perform downstream analysis for miRNA analysis
-3. Convert the pipeline into Nextflow or Snakemake
+3. Convert the pipeline into Snakemake
 
 Through the project, you need to demonstrate collaborative research skills, informative visualization, and report writing.
 
