@@ -58,4 +58,4 @@ library(ggrepel)
 library(devtools)
 library(extrafont)
 
-## Target prediction and 7 annotation 
+## Target prediction and functional annotation
