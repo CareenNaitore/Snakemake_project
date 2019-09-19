@@ -34,18 +34,18 @@ For *Filtering* process involves removing other types of sRNA, The libraries con
 5.Generated overlaping features
 6.uing linux command filtered in (**filterbash.sh**) out the unwanted sequence and then used the once (matched miRNA and unmatched sequences)
 
-## miRNA analysis
-# miRNA identification and characterisation
+## MiRNA Analysis
+### miRNA identification and characterisation
 miRNA identifcation involves annotating miRNA genes on the sequences of the libraries.This process is intensive and time consuming because of the length of the sequences which is about (18-25 bps). It involves the software [miRdeep2](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3245920/) and the database used for the analysis is (miRBase)(v 22)[http://www.mirbase.org/]. 
 This commands are summarized in the bash script miRDeep2.sh, that i generated: it is a loopcommand that contains:
-1. Developing index file([bowtie software])(http://bowtie-bio.sourceforge.net/index.shtml) 
-2. aligning sequence ([mapper.pl])(https://github.com/rajewsky-lab/mirdeep2)
-3. miRNA identification analysis([miRdeep2.pl])(https://github.com/rajewsky-lab/mirdeep2)
-4. quantifies the number of reads([quantifier.pl])(https://github.com/rajewsky-lab/mirdeep2)
-# miRNA differential expression
-miRNA expression profiling is analyzed by two different software([Persus software])(http://www.perseus-framework.org) and ([R programming]) (https://cran.r-project.org/bin/windows/base/). the expression profiles were analyzed by first examining the correlation between the replicates, if there was a high correlation between the replicates stastical analysis was done using the ([edgeR package])(https://bioconductor.org/packages/release/bioc/html/edgeR.html) applying negative binomial test comparing between consecutive life stages(larvae vs pupae).The expression profiles was determined by the false discovery rate(adjusted p value) and the log fold change between the replicates.
+1. Developing index file[bowtie software](http://bowtie-bio.sourceforge.net/index.shtml) 
+2. aligning sequence [mapper.pl](https://github.com/rajewsky-lab/mirdeep2)
+3. miRNA identification analysis [miRdeep2.pl](https://github.com/rajewsky-lab/mirdeep2)
+4. quantifies the number of reads[quantifier.pl](https://github.com/rajewsky-lab/mirdeep2)
+#### miRNA differential expression
+miRNA expression profiling is analyzed by two different software [Persus software](http://www.perseus-framework.org) and [R programming](https://cran.r-project.org/bin/windows/base/). the expression profiles were analyzed by first examining the correlation between the replicates, if there was a high correlation between the replicates stastical analysis was done using the [edgeR package](https://bioconductor.org/packages/release/bioc/html/edgeR.html) applying negative binomial test comparing between consecutive life stages(larvae vs pupae).The expression profiles was determined by the false discovery rate(adjusted p value) and the log fold change between the replicates.
 ###CODES FOR DIFFERENTIAL EXPRESSION AND PLOTS 
-1.([Persus software])( http://www.perseus-framework.org), a machine-learning based module  integrated with a collection of statistical tools  used for protemic down stream analysis, but can also be used in the study of other omics data analyis for covering normalization, pattern recogntion, time series analyis, cross omics comparison and multiple hypothesis testing   was used for analyis of variation within the replicates and also correlation with the miRNA relative abundance using pearson correlation coefficient module.
+1.[Persus software](http://www.perseus-framework.org), a machine-learning based module  integrated with a collection of statistical tools  used for protemic down stream analysis, but can also be used in the study of other omics data analyis for covering normalization, pattern recogntion, time series analyis, cross omics comparison and multiple hypothesis testing   was used for analyis of variation within the replicates and also correlation with the miRNA relative abundance using pearson correlation coefficient module.
 The software has a powerful visulization platform for the expression profile of miRNA, i was able to generate a heat map graph using the softwre  
 2.**edgeranalysis.R**:this script is in r code and is used to generate the maplots and the expression profile information in edgeranalysis folder, it works with edgeR package in r for analysis of my sequence the scripts contains codes in r and comments for each code hence it is easy to flow. 
 3. **volcanoplots.R**:this script is in r code and is used to generate volcanopots for differential expression visualization in consecutive life stages caurrently the scripts intergrates with packages from r including:
