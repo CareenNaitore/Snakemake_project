@@ -1,10 +1,13 @@
 
 ## MiRNA TRANSCRIPTOME ANALYSIS In TSESTE  USING BIOINFORMATIC SOFTWARE
 ## introduction
-miRNAs are small non coding RNA that codes for 18-25 bases pairs, the work flow for analysis of miRNA is
-Quality assements, genomeannotation , filtering out other types of small non coding RNA , miRNA analysis(miRNA identification and miRNA differential expression)
+The pipeline involves 
+1.Quality assements
+2.genomeannotation 
+3.filtering out other types of small non coding RNA 
+4.miRNA analysis(miRNA identification and miRNA differential expression)
+5.Target prediction and annotation
 
-The folder contains all the code for miRNA analysis this involves various steps.
 ## Quality assesment
 For *quality assesment*: the script **adapter_removal.sh** is suited for this step, it is a bash script i designed to help in improving the quality of my sequence, this scripts involves various procedure, 1. quality check (pre-triming quality check using fastqc software)
                 2. triming the adapters(using cutadapt and fastx toolkitsoftware)
