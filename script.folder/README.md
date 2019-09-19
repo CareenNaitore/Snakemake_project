@@ -26,7 +26,7 @@ This involves calculation of the length distribution in each sequnce library. Th
 1. Building indexes for the genome ( Most aligners require one to build indexes for better alignment using bowtie softwares) 2. alignment of the sequences to the build indexes(using the bowtie software and mapper.pl command)
 
 ## Filtering out unwanted sequences(other types of small non coding RNA)
-For *Filtering* process involves removing other types of sRNA, The libraries contains sequences (length 18-35bps), currently we are interested in identifying miRNA and i developed a bash script for filtering all the sequence and did a statistical analysis using R,This process involves a database known as [Rfam](https://academic.oup.com/nar/article/46/D1/D335/4588106) which is currently the most recent updated database for non-coding RNA using these information and the software [infernal](http://eddylab.org/infernal/) :1. **noncodingRNA.sh** (the script has been developed with various command) current the script has about six procedures to be followed:
+*Filtering* process involves removing other types of sRNA, The libraries contains sequences (length 18-35bps), currently we are interested in identifying miRNA.The procedure involves a database known as [Rfam](https://academic.oup.com/nar/article/46/D1/D335/4588106) and their availble software [infernal](http://eddylab.org/infernal/). the script used is  **noncodingRNA.sh** currentily has about six procedures:
 1.aligning to the genome(mapper.pl script from mirdeep2)
 2.Creating indexes for alignment in Rfam(infernal command)
 3.annotating the genome with small noncoding genes(creating a GTF file)(uing the command for infernal and the database available)
@@ -36,15 +36,14 @@ For *Filtering* process involves removing other types of sRNA, The libraries con
 
 ## MiRNA analysis
 ### miRNA identification and characterisation
-miRNA identifcation involves annotating miRNA genes on the sequences of the libraries.This process is intensive and time consuming because of the length of the sequences which is about (18-25 bps). It involves the software [miRdeep2](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3245920/) and the database used for the analysis is (miRBase)(v 22)[http://www.mirbase.org/]. 
-This commands are summarized in the bash script **miRDeep2.sh**, that i generated: it is a loop command that contains:
+miRNA identifcation involves annotating miRNA genes on the sequences of the libraries. It involves the software [miRdeep2](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3245920/) and the database used for the analysis is (miRBase)(v 22)[http://www.mirbase.org/]. The bash script developed includes **miRDeep2.sh**:
 1. Developing index file [bowtie software](http://bowtie-bio.sourceforge.net/index.shtml) 
 2. aligning sequence [mapper.pl](https://github.com/rajewsky-lab/mirdeep2)
 3. miRNA identification analysis [miRdeep2.pl](https://github.com/rajewsky-lab/mirdeep2)
 4. quantifies the number of reads [quantifier.pl](https://github.com/rajewsky-lab/mirdeep2)
 
 #### miRNA differential expression
-miRNA expression profiling is analyzed by two different software [Persus software](http://www.perseus-framework.org) and [R programming](https://cran.r-project.org/bin/windows/base/). the expression profiles were analyzed by first examining the correlation between the replicates, if there was a high correlation between the replicates stastical analysis was done using the [edgeR package](https://bioconductor.org/packages/release/bioc/html/edgeR.html) applying negative binomial test comparing between consecutive life stages and sexes.The expression profiles was determined by the false discovery rate(adjusted p value) and the log fold change between the replicates.
+miRNA expression profiling is analyzed by two different software [Persus software](http://www.perseus-framework.org) and [R programming](https://cran.r-project.org/bin/windows/base/). The expression profiles were analyzed by first examining the correlation between the replicates, if there was a high correlation between the replicates stastical analysis was done using the [edgeR package](https://bioconductor.org/packages/release/bioc/html/edgeR.html) applying negative binomial test comparing between consecutive life stages and sexes.The expression profiles was determined by the false discovery rate(adjusted p value) and the log fold change between the replicates.
 
 **codes for differential expression and plots** 
 
