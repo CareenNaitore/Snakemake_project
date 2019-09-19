@@ -2,9 +2,13 @@
 ## introduction
 The pipeline involves 
 1.Quality assements
-2.genomeannotation 
+
+2.genomeannotation
+
 3.filtering out other types of small non coding RNA 
+
 4.miRNA analysis(miRNA identification and miRNA differential expression)
+
 5.Target prediction and annotation
 
 ## Quality assesment
