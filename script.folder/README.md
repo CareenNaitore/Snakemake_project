@@ -18,7 +18,7 @@ For *quality assesment*: the script **adapter_removal.sh** is suited for this st
                 3. removal of contaminants(using a command awk command)
                 4. Quality check (post-trimming quality check using fastqc softwre)
                 5. Determing the length of my sequences using (awk command)
-### lengthdistribution
+### Lengthdistribution
 This involves calculation of the length distribution in each file of the read libary sequence and determines the number of reads in each length of the sequence. The scripts used are in bash scripting and r scripts(**lengthdistribution.sh* and *lengthdistribution_R2.R**).After determining the length of the sequencing using the awk command.The *lengthdistribution.sh* reshapes the data for analysis in r programming to generate the bar graphs to represent the length distribution, Graphs are designed by r as bar plots 
 
 ## Genome annotation 
