@@ -18,7 +18,7 @@ For *quality assesment*: the script **adapter_removal.sh** is suited for this st
                 3. removal of contaminants(using a command awk command)
                 4. Quality check (post-trimming quality check using fastqc softwre)
                 5. Determing the length of my sequences using (awk command)
-### Lengthdistribution
+### Length distribution
 This involves calculation of the length distribution in each file of the read libary sequence and determines the number of reads in each length of the sequence. The scripts used are in bash scripting and r scripts(**lengthdistribution.sh* and *lengthdistribution_R2.R**).After determining the length of the sequencing using the awk command.The *lengthdistribution.sh* reshapes the data for analysis in r programming to generate the bar graphs to represent the length distribution, Graphs are designed by r as bar plots 
 
 ## Genome annotation 
@@ -32,9 +32,9 @@ For *Filtering* process involves removing other types of sRNA, The libraries con
 3.annotating the genome with small noncoding genes(creating a GTF file)(uing the command for infernal and the database available)
 4.generated bedfiles(using bedtools)
 5.Generated overlaping features
-6.uing linux command filtered in (**filterbash.sh**) out the unwanted sequence and then used the once (matched miRNA and unmatched sequences)
+6.uing linux command filtered in **filterbash.sh** out the unwanted sequence and then used the once (matched miRNA and unmatched sequences)
 
-## MiRNA Analysis
+## MiRNA analysis
 ### miRNA identification and characterisation
 miRNA identifcation involves annotating miRNA genes on the sequences of the libraries.This process is intensive and time consuming because of the length of the sequences which is about (18-25 bps). It involves the software [miRdeep2](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3245920/) and the database used for the analysis is (miRBase)(v 22)[http://www.mirbase.org/]. 
 This commands are summarized in the bash script miRDeep2.sh, that i generated: it is a loopcommand that contains:
