@@ -22,7 +22,7 @@ For *quality assesment*: the script **adapter_removal.sh** is suited for this st
 This involves calculation of the length distribution in each file of the read libary sequence and determines the number of reads in each length of the sequence. The scripts used are in bash scripting and r scripts(**lengthdistribution.sh* and *lengthdistribution_R2.R**).After determining the length of the sequencing using the awk command.The *lengthdistribution.sh* reshapes the data for analysis in r programming to generate the bar graphs to represent the length distribution, Graphs are designed by r as bar plots 
 
 ## Genome annotation 
-For *Genome annotation* is a very crucial process in the analysis of miRNA(genome annotation involves identification of the position of a given sequence in the genome) The script is  **noncodingRNA.sh**, also the script combine both perl and bash scripting.The softwre [mirdeep2](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3245920/) is an intergarted software for the analysis of miRNA,the software is build up of many scrpts(perl script).In this analysis, am currently focusing with the mapper.pl script: 
+*Genome annotation* involves aligning to the genome of reference and  identifiying the position of a given sequence in the genome. The script used in th analysis is  **noncodingRNA.sh**, also the script combine both perl and bash scripting:
 1. Building indexes for the genome ( Most aligners require one to build indexes for better alignment using bowtie softwares) 2. alignment of the sequences to the build indexes(using the bowtie software and mapper.pl command)
 
 ## Filtering out unwanted sequences(other types of small non coding RNA)
