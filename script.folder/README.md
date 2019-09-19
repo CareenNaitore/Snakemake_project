@@ -2,9 +2,9 @@
 ## introduction
 The pipeline involves 
 
-1.Quality assements
+1.quality assements
 
-2.genomeannotation
+2.genome annotation
 
 3.filtering out other types of small non coding RNA 
 
@@ -38,10 +38,10 @@ For *Filtering* process involves removing other types of sRNA, The libraries con
 ### miRNA identification and characterisation
 miRNA identifcation involves annotating miRNA genes on the sequences of the libraries.This process is intensive and time consuming because of the length of the sequences which is about (18-25 bps). It involves the software [miRdeep2](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3245920/) and the database used for the analysis is (miRBase)(v 22)[http://www.mirbase.org/]. 
 This commands are summarized in the bash script miRDeep2.sh, that i generated: it is a loopcommand that contains:
-1. Developing index file[bowtie software](http://bowtie-bio.sourceforge.net/index.shtml) 
+1. Developing index file [bowtie software](http://bowtie-bio.sourceforge.net/index.shtml) 
 2. aligning sequence [mapper.pl](https://github.com/rajewsky-lab/mirdeep2)
 3. miRNA identification analysis [miRdeep2.pl](https://github.com/rajewsky-lab/mirdeep2)
-4. quantifies the number of reads[quantifier.pl](https://github.com/rajewsky-lab/mirdeep2)
+4. quantifies the number of reads [quantifier.pl](https://github.com/rajewsky-lab/mirdeep2)
 
 #### miRNA differential expression
 miRNA expression profiling is analyzed by two different software [Persus software](http://www.perseus-framework.org) and [R programming](https://cran.r-project.org/bin/windows/base/). the expression profiles were analyzed by first examining the correlation between the replicates, if there was a high correlation between the replicates stastical analysis was done using the [edgeR package](https://bioconductor.org/packages/release/bioc/html/edgeR.html) applying negative binomial test comparing between consecutive life stages(larvae vs pupae).The expression profiles was determined by the false discovery rate(adjusted p value) and the log fold change between the replicates.
