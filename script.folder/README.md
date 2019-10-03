@@ -36,7 +36,7 @@ This involves calculation of the length distribution in each sequnce library. Th
 
 ## MiRNA analysis
 ### miRNA identification and characterisation
-miRNA identifcation involves annotating miRNA genes on the sequences of the libraries. It involves the software [miRdeep2](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3245920/) and the database used for the analysis is (miRBase)(v 22)[http://www.mirbase.org/]. The bash script developed includes **miRDeep2.sh**:
+miRNA identifcation involves annotating miRNA genes on the sequences of the libraries. It involves the software [miRdeep2](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3245920/) and the database used for the analysis is [miRBase](http://www.mirbase.org/)(v 22). The bash script developed includes **miRDeep2.sh**:
 1. Developing index file [bowtie software](http://bowtie-bio.sourceforge.net/index.shtml) 
 2. aligning sequence [mapper.pl](https://github.com/rajewsky-lab/mirdeep2)
 3. miRNA identification analysis [miRdeep2.pl](https://github.com/rajewsky-lab/mirdeep2)
