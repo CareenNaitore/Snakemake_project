@@ -220,7 +220,7 @@ p6
 library(gridExtra)
 library(grid)
 grid.arrange(p1, p2, p3, p4, p5 ,p6)
-g <- arrangeGrob(p1, p2, p3, p4, p5, p6, nrow=2, top = "Differentilaly expressed stage-specific miRNAs " ) #generates g
+g <- arrangeGrob(p1, p2, p3, p4, p5, p6, nrow=2) #generates g
 library(devEMF)
 emf('imPic.emf')
 print(g)
