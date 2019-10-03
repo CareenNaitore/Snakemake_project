@@ -121,12 +121,12 @@ p1
 par(lwd=0.5)
 p1 <-p1+geom_text_repel(data=filter(larvae_vs_pupae, FDR <0.05 & abs(logFC)>1),
                       family = "", aes(label=Row.names),size = 9, 
-                      arrow = arrow(length = unit(0.01, 'npc')), 
-                      force = 7,box.padding = unit(0.4, "lines"), 
-                      point.padding = unit(0.3, "lines"))+labs(x="log2 fold change for pupae compared to larvae",title="Larvae vs pupae",
-                                                               y="-log10(PValue)")+ theme(panel.grid.major = element_blank(), panel.grid.minor = element_blank(), panel.background = element_blank(), axis.line = element_line(colour = "black"))+theme( plot.title=element_text(size=50),
+                      arrow = arrow(length = unit(0.00, 'npc')), 
+                      force = 7,box.padding = unit(0.2, "lines"), 
+                      point.padding = unit(0.01, "lines"))+labs(x="log2 fold change",title="C. Larvae vs. pupae",
+                                                               y="-log10(PValue)")+ theme(panel.grid.major = element_blank(), panel.grid.minor = element_blank(), panel.background = element_blank(), axis.line = element_line(colour = "black"))+theme(plot.title=element_text(size=50, face = "bold"),
                                                                                                                                                                                                                                                         axis.text=element_text(size=50),
-                                                                                                                                                                                                                                                        axis.title=element_text(size=50))+theme(legend.title = element_text( size = 20),legend.text = element_text(size = 20))
+                                                                                                                                                                                                                                                        axis.title=element_text(size=50))+theme(legend.title = element_text( size = 20),legend.text = element_text(size = 20))+ theme(legend.position = "none") 
 
 p1
 detach(larvae_vs_pupae)
@@ -140,12 +140,12 @@ p2
 par(lwd=0.5)
 p2 <-p2+geom_text_repel(data=filter(Pupae_vs_teneralfemale, FDR <0.05 & abs(logFC)>1),
                        family = "", aes(label=Row.names),size = 9, 
-                       arrow = arrow(length = unit(0.01, 'npc')), 
-                       force = 7,box.padding = unit(0.4, "lines"), 
-                       point.padding = unit(0.3, "lines"))+labs(x="log2 fold change for Teneralfemale compared to pupae",title="Pupae vs teneralfemale",
-                                                                y="-log10(PValue)")+theme(panel.grid.major = element_blank(), panel.grid.minor = element_blank(), panel.background = element_blank(), axis.line = element_line(colour = "black"))+theme( plot.title=element_text(size=50),
-                                                                                                                                                                                                                                                          axis.text=element_text(size=50),
-                                                                                                                                                                                                                                                          axis.title=element_text(size=50))+theme(legend.title = element_text( size = 20),legend.text = element_text(size = 20))
+                       arrow = arrow(length = unit(0.00, 'npc')), 
+                       force = 7,box.padding = unit(0.2, "lines"), 
+                       point.padding = unit(0.01, "lines"))+labs(x="log2 fold change",
+                                                                 y = NULL,title="D. Pupae vs. teneral females")+theme(panel.grid.major = element_blank(), panel.grid.minor = element_blank(), panel.background = element_blank(), axis.line = element_line(colour = "black"))+theme(plot.title=element_text(size=50, face = "bold"),
+                                                                                                                                                                                                                                                                                                        axis.text=element_text(size=50),
+                                                                                                                                                                                                                                                                                                        axis.title=element_text(size=50)) +theme(legend.title = element_text( size = 20),legend.text = element_text(size = 20))+ theme(legend.position = "none")
 
 
 
@@ -159,12 +159,12 @@ p3
 par(lwd=0.5)
 p3 <-p3+geom_text_repel(data=filter(Pupae_vs_teneralmale, FDR <0.05 & abs(logFC)>1),
                         family = "", aes(label=Row.names),size = 9, 
-                        arrow = arrow(length = unit(0.01, 'npc')), 
-                        force = 7,box.padding = unit(0.4, "lines"), 
-                        point.padding = unit(0.3, "lines"))+labs(x="log2 fold change for Teneralmale compared to pupae",title="Pupae vs teneralmale",
-                                                                 y="-log10(PValue)")+theme(panel.grid.major = element_blank(), panel.grid.minor = element_blank(), panel.background = element_blank(), axis.line = element_line(colour = "black"))+theme( plot.title=element_text(size=50),
+                        arrow = arrow(length = unit(0.00, 'npc')), 
+                        force = 7,box.padding = unit(0.2, "lines"), 
+                        point.padding = unit(0.01, "lines"))+labs(x="log2 fold change",title="E. Pupae vs. teneral males",
+                                                                 y="-log10(PValue)") +theme(panel.grid.major = element_blank(), panel.grid.minor = element_blank(), panel.background = element_blank(), axis.line = element_line(colour = "black"))+theme( plot.title=element_text(size=50, face="bold"),
                                                                                                                                                                                                                                                           axis.text=element_text(size=50),
-                                                                                                                                                                                                                                                          axis.title=element_text(size=50))+theme(legend.title = element_text( size = 20),legend.text = element_text(size = 20))
+                                                                                                                                                                                                                                                          axis.title=element_text(size=50))+theme(legend.title = element_text( size = 20),legend.text = element_text(size = 20))+ theme(legend.position = "none")
 
 detach(Pupae_vs_teneralmale)
 attach(teneralfemale_vs_adultfemale)
@@ -176,12 +176,12 @@ p4
 par(lwd=0.5)
 p4 <-p4+geom_text_repel(data=filter(teneralfemale_vs_adultfemale, FDR <0.05 & abs(logFC)>1),
                         family = "", aes(label=Row.names),size = 9, 
-                        arrow = arrow(length = unit(0.01, 'npc')), 
-                        force = 7,box.padding = unit(0.4, "lines"), 
-                        point.padding = unit(0.3, "lines"))+labs(x="log2 fold change for Teneral female compared to Non-teneral female",title="Teneral vs non-teneral female",
-                                                                 y="-log10(PValue)")+theme(panel.grid.major = element_blank(), panel.grid.minor = element_blank(), panel.background = element_blank(), axis.line = element_line(colour = "black"))+theme( plot.title=element_text(size=50),
+                        arrow = arrow(length = unit(0.00, 'npc')), 
+                        force = 7,box.padding = unit(0.2, "lines"), 
+                        point.padding = unit(0.01, "lines"))+labs(x="log2 fold change",title= "F. Teneral vs. non-teneral females",
+                                                                  y= NULL) +theme(panel.grid.major = element_blank(), panel.grid.minor = element_blank(), panel.background = element_blank(), axis.line = element_line(colour = "black"))+theme( plot.title=element_text(size=50, face = "bold"),
                                                                                                                                                                                                                                                          axis.text=element_text(size=50),
-                                                                                                                                                                                                                                                         axis.title=element_text(size=50))+theme(legend.title = element_text( size = 20),legend.text = element_text(size = 20))
+                                                                                                                                                                                                                                                         axis.title=element_text(size=50))+theme(legend.title = element_text( size = 20),legend.text = element_text(size = 20))+ theme(legend.position = "none")
 detach(teneralfemale_vs_adultfemale)
 attach(teneralmale_vs_adultmale)
 p5 = ggplot(teneralmale_vs_adultmale, aes(logFC, -log10(PValue))) + geom_point(aes(col=sig),size = 4) + theme_bw(base_size = 9) + coord_cartesian(ylim=c(0,300))+ coord_cartesian(xlim=c(-15,15))  + scale_color_manual(values=c("red","black")) 
@@ -193,11 +193,11 @@ par(lwd=0.5)
 p5 <-p5+geom_text_repel(data=filter(teneralmale_vs_adultmale, FDR <0.05 & abs(logFC)>1),
                         family = "", aes(label=Row.names),size = 9, 
                         arrow = arrow(length = unit(0.01, 'npc')), 
-                        force = 7,box.padding = unit(0.4, "lines"), 
-                        point.padding = unit(0.3, "lines"))+labs(x="log2 fold change for Teneral male compared to Non-teneral male",title="Teneral vs non-teneral male",
-                                                                 y="-log10(PValue)")+theme(panel.grid.major = element_blank(), panel.grid.minor = element_blank(), panel.background = element_blank(), axis.line = element_line(colour = "black"))+theme( plot.title=element_text(size=50),
+                        force = 7,box.padding = unit(0.2, "lines"), 
+                        point.padding = unit(0.01, "lines"))+labs(x="log2 fold change ",title="G. Teneral vs non-teneral males",
+                                                                 y="-log10(PValue)" )+theme(panel.grid.major = element_blank(), panel.grid.minor = element_blank(), panel.background = element_blank(), axis.line = element_line(colour = "black"))+theme( plot.title=element_text(size=50 , face = "bold"),
                                                                                                                                                                                                                                                          axis.text=element_text(size=50),
-                                                                                                                                                                                                                                                         axis.title=element_text(size=50))+theme(legend.title = element_text( size = 20),legend.text = element_text(size = 20))
+                                                                                                                                                                                                                                                         axis.title=element_text(size=50))+theme(legend.title = element_text( size = 20),legend.text = element_text(size = 20))+ theme(legend.position = "none") 
 p5
 detach(teneralmale_vs_adultmale)
 attach(nongravid_vs_gravid)
@@ -209,17 +209,17 @@ par(lwd=0.5)
 p6 <-p6+geom_text_repel(data=filter(nongravid_vs_gravid, FDR <0.05 & abs(logFC)>1),
                         family = "", aes(label=Row.names),size = 9, 
                         arrow = arrow(length = unit(0.01, 'npc')), 
-                        force = 7,box.padding = unit(0.4, "lines"), 
-                        point.padding = unit(0.3, "lines"))+labs(x="log2 fold change for Gravid female compared to Non-Gravid female",title="Gravid vs non-gravid female",
-                                                                 y="-log10(PValue)")+theme(panel.grid.major = element_blank(), panel.grid.minor = element_blank(), panel.background = element_blank(), axis.line = element_line(colour = "black"))+ theme(legend.title = element_text( size = 20),legend.text = element_text(size = 20))+theme(plot.title=element_text(size=50),
+                        force = 7,box.padding = unit(0.2, "lines"), 
+                        point.padding = unit(0.01, "lines"))+labs(x="log2 fold change",title="H. Gravid vs non-gravid females",
+                                                                 y= NULL) +theme(panel.grid.major = element_blank(), panel.grid.minor = element_blank(), panel.background = element_blank(), axis.line = element_line(colour = "black"))+ theme(legend.title = element_text( size = 20),legend.text = element_text(size = 20))+theme(plot.title=element_text(size=50, face = "bold"),
                                                                                                                                                                                                                                                                                                                                                 axis.text=element_text(size=50),
-                                                                                                                                                                                                                                                                                                                                              axis.title=element_text(size=50))
+                                                                                                                                                                                                                                                                                                                                              axis.title=element_text(size=50))+ theme(legend.position = "none")
 
 p6
 #combining the graphs
 library(gridExtra)
 library(grid)
-grid.arrange(p1, p2, p3, p4, p5 ,p6, top=textGrob("Differentially expressed stage-specific miRNAs", gp=gpar(fontsize=50, font=25)))
+grid.arrange(p1, p2, p3, p4, p5 ,p6)
 g <- arrangeGrob(p1, p2, p3, p4, p5, p6, nrow=2, top = "Differentilaly expressed stage-specific miRNAs " ) #generates g
 library(devEMF)
 emf('imPic.emf')
