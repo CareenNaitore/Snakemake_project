@@ -36,10 +36,15 @@ This involves calculation of the length distribution in each sequnce library. Th
 ## Filtering out unwanted sequences(other types of small non coding RNA)
 *Filtering* process involves removing other types of sRNA, The libraries contains sequences (length 18-35bps), currently we are interested in identifying miRNA.The procedure involves a database known as [Rfam](https://academic.oup.com/nar/article/46/D1/D335/4588106) and their availble software [infernal](http://eddylab.org/infernal/). the script used is  **noncodingRNA.sh** currentily has about six procedures:
 1.aligning to the genome(mapper.pl script from mirdeep2)
+
 2.Creating indexes for alignment in Rfam(infernal command)
+
 3.annotating the genome with small noncoding genes(creating a GTF file)(uing the command for infernal and the database available)
+
 4.generated bedfiles(using bedtools)
+
 5.Generated overlaping features
+
 6.uing linux command filtered in **filterbash.sh** out the unwanted sequence and then used the once (matched miRNA and unmatched sequences)
 
 ## MiRNA analysis
