@@ -63,4 +63,5 @@ miRNA target prediction is analyzed by two different software [miRanda software]
 1. Determining the target using miRanda
 2. Determining the target using RNAhybrid 
 3. Extracting information from boith results of miRanda and RNA hybrid 
-4 determining how many target genes has been identified in both software.
+4 determining how many target genes has been identified in both software. 
+functional annotation was conducted by BLAST2GO SOFTWARE (Visual basic softwrare)
