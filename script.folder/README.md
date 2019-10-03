@@ -14,6 +14,7 @@ The pipeline involves
 
 ## Quality assesment
 For *quality assesment*: the script **adapter_removal.sh** is suited for this step, it is a bash script i designed to help in improving the quality of my sequence, this scripts involves various procedure, 
+               
                 1. quality check (pre-triming quality check using fastqc software)
                 
                 2. triming the adapters(using cutadapt and fastx toolkitsoftware)
