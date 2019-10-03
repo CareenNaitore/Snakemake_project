@@ -60,12 +60,12 @@ library(extrafont)
 
 ## Target prediction and functional annotation
 miRNA target prediction is analyzed by two different software [miRanda software](http://www.mirtoolsgallery.org/miRToolsGallery/node/1055) and [RNAhybrid](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC1538877/). The miRNA genes from the consecutive life stages and sexes and the 3 untranslated mRNA regions from [vectorbase](https://www.vectorbase.org) was used to determine the function of the miRNA in our species. We applied the **targetprediction.sh** script: it has four steps:
-1. Determining the target using miRanda
+ 1. Determining the target using miRanda
 
-2. Determining the target using RNAhybrid
+ 2. Determining the target using RNAhybrid
 
-3. Extracting information from boith results of miRanda and RNA hybrid
+ 3. Extracting information from boith results of miRanda and RNA hybrid
 
-4 determining how many target genes has been identified in both software
+ 4 determining how many target genes has been identified in both software
 
  Functional annotation was conducted by BLAST2GO SOFTWARE (Visual basic softwrare)
