@@ -13,17 +13,24 @@ The pipeline involves
 5.Target prediction and annotation
 
 ## Quality assesment
-For *quality assesment*: the script **adapter_removal.sh** is suited for this step, it is a bash script i designed to help in improving the quality of my sequence, this scripts involves various procedure, 1. quality check (pre-triming quality check using fastqc software)
+For *quality assesment*: the script **adapter_removal.sh** is suited for this step, it is a bash script i designed to help in improving the quality of my sequence, this scripts involves various procedure, 
+                1. quality check (pre-triming quality check using fastqc software)
+                
                 2. triming the adapters(using cutadapt and fastx toolkitsoftware)
+                
                 3. removal of contaminants(using a command awk command)
+               
                 4. Quality check (post-trimming quality check using fastqc softwre)
+                
                 5. Determing the length of my sequences using (awk command)
 ### Length distribution
 This involves calculation of the length distribution in each sequnce library. The scripts used are in bash scripting and r scripts format: **lengthdistribution.sh* and *lengthdistribution_R2.R**.After determining the length of the sequences using the awk command.The *lengthdistribution.sh* reshapes the data for analysis in r programming to generates distribution in length. 
 
 ## Genome annotation 
 *Genome annotation* involves aligning to the reference genome. The script used in the analysis is  **noncodingRNA.sh**, also the script combine both perl and bash scripting involves:
-1. Building indexes for the genome ( Most aligners require one to build indexes for better alignment using bowtie softwares) 2. alignment of the sequences to the build indexes(using the bowtie software and mapper.pl command)
+1. Building indexes for the genome ( Most aligners require one to build indexes for better alignment using bowtie softwares) 
+
+2. alignment of the sequences to the build indexes(using the bowtie software and mapper.pl command)
 
 ## Filtering out unwanted sequences(other types of small non coding RNA)
 *Filtering* process involves removing other types of sRNA, The libraries contains sequences (length 18-35bps), currently we are interested in identifying miRNA.The procedure involves a database known as [Rfam](https://academic.oup.com/nar/article/46/D1/D335/4588106) and their availble software [infernal](http://eddylab.org/infernal/). the script used is  **noncodingRNA.sh** currentily has about six procedures:
