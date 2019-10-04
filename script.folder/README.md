@@ -62,9 +62,11 @@ miRNA expression profiling is analyzed by two different software [Persus softwar
 
 1.[Persus software](http://www.perseus-framework.org), a machine-learning based module  integrated with a collection of statistical tools  used for protemic down stream analysis, but can also be used in the study of other omics data analyis for covering normalization, pattern recogntion, time series analyis, cross omics comparison and multiple hypothesis testing   was used for analyis of variation within the replicates and also correlation with the miRNA relative abundance using pearson correlation coefficient module.
 The software has a powerful visulization platform for the expression profile of miRNA, i was able to generate a heat map graph using the software  
+
 2.**edgeranalysis.R**:this script is in r code and is used to generate the maplots and the expression profile information in edgeranalysis folder, it works with edgeR package in r for analysis of my sequence the scripts contains codes in r and comments for each code hence it is easy to flow. 
-3. **Graph _for_publication_for_stage_specific.R** and **Graph _for_publication_for_sex_specific.R**: theCIPE
-script is in r code and is used to generate volcanopots for differential expression visualization in consecutive life stages caurrently the scripts intergrates with packages from r including:
+
+3. **Graph _for_publication_for_stage_specific.R** and **Graph _for_publication_for_sex_specific.R**: the
+script is in r code and is used to generate volcanopots for differential expression visualization in consecutive life stages currently the scripts intergrates with packages from r including:
 library(dplyr)
 library(ggplot2)
 library(ggrepel)
